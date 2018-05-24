@@ -9,6 +9,15 @@ public class CabineComVaranda extends Cabine implements Extras {
 		super(num, maxOcupantes);
 		this.tipoVaranda = tipoVaranda;
 	}
+	
+	
+
+	@Override
+	public String toString() {
+		return "Cabine Com Varanda " + this.tipoVaranda + " " + super.toString();
+	}
+
+
 
 	public TipoDeVaranda getTipo() {
 		return tipoVaranda;

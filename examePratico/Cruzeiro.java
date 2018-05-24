@@ -19,6 +19,21 @@ public class Cruzeiro {
 		}
 		this.dataInicio = dataInicio;
 	}
+	
+	
+
+	@Override
+	public String toString() {
+		String s = "";
+		s += "Navio " + this.nome + ", partida em " + this.dataInicio + "\n";
+		s += "Itinerário: " + this.cidades + "\n";
+		for(Cabine c : cabines) {
+			s += "" + c + "\n";
+		}
+		return s;
+	}
+
+
 
 	public int getDuracao() {
 		return duracao;
@@ -31,6 +46,18 @@ public class Cruzeiro {
 	public void add(Cabine c) {
 		cabines.add(c);
 	}
+
+
+
+	public Set<Cabine> getCabines() {
+		return cabines;
+	}
+
+	public void setCabines(Set<Cabine> cabines) {
+		this.cabines = cabines;
+	}
+	
+	
 	
 	
 	

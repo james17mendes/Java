@@ -1,5 +1,7 @@
 package examePratico;
 
+import java.util.*;
+
 public class GestaoDeCruzeiro {
 
 	public static void main(String[] args) {
@@ -20,6 +22,41 @@ public class GestaoDeCruzeiro {
 	public void alinea2() {
 		Cruzeiro cruz = criarCruzeiro();
 		// coloque o código da alínea 2 aqui
+		
+		// 2.1 - percentagem de cabines disponíveis para venda;
+		int cabinesDisponiveis = 0;
+		for(Cabine c : cruz.getCabines()) {
+			if(c.getPassageiros() == null) {
+				cabinesDisponiveis++;
+			}
+		}
+		int percentagem = ( cabinesDisponiveis * 100 ) / cruz.getCabines().size();
+		System.out.println("\nPercentagem de cabines disponíveis para venda: " + percentagem + "%");
+		
+		// 2.2 - a média de pessoas por quarto nas Suites ocupadas;
+		Set<Suite> suites = new TreeSet<>();
+		
+		for(Cabine c : cruz.getCabines()) {
+			if(c instanceof Suite) {
+				suites.add((Suite) c);
+			}
+		}
+		
+		double totalPassageiros = 0.0, totalQuartos = 0.0;
+		for(Suite s : suites) {
+			if(s.getPassageiros() != null) {
+				totalPassageiros += s.getPassageiros().length;
+				totalQuartos += s.getNumQuartos();
+			}
+		}
+		
+		double media = (totalPassageiros / totalQuartos);
+		System.out.println("\nA média de pessoas por quarto nas suites ocupadas: " + media + "\n");
+		
+		// 2.3 - os dados das cabines ocupadas, ordenadas por número.
+		for(Cabine c : cruz.getCabines()) {
+			System.out.println(c);
+		}
 	}
 	
 	public Cruzeiro criarCruzeiro() {

@@ -17,6 +17,11 @@ public class CabineComJanela extends Cabine implements Extras {
 	}
 
 	@Override
+	public String toString() {
+		return "Cabine Com Janela " + this.tipo + " " + super.toString();
+	}
+
+	@Override
 	public void pacoteExtra(Extra extra) {
 		this.extra = extra;
 	}

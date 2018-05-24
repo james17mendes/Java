@@ -8,6 +8,15 @@ public class Suite extends Cabine {
 		super(num, capacidade);
 		// TODO Auto-generated constructor stub
 	}
+	
+	
+
+	@Override
+	public String toString() {
+		return "Suite c/" + numQuartos + " quartos " + super.toString();
+	}
+
+
 
 	public int getNumQuartos() {
 		return numQuartos;

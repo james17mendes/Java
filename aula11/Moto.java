@@ -1,31 +1,22 @@
 package aula11;
 
-public class Moto extends Veiculo {
-
-
-	// atributos
-	private int potencia;
-
-	// construtor
-	public Moto(String matricula, int ano, String cor, int potencia) {
+public class Moto extends Veiculo { 
+	
+	// Atributos
+	private double potencia;
+	
+	// Construtor
+	public Moto(String matricula, int ano, String cor, double potencia) {
 		super(matricula, ano, cor);
 		this.potencia = potencia;
-		
-	}
-	
-	// metodo toString
-	@Override
-	public String toString() {
-		return "Moto [potencia=" + potencia + super.toString() + "]";
-	}
-	
-	// getters and setterss
-	public int getPotencia() {
-		return potencia;
 	}
 
-	public void setPotencia(int potencia) {
-		this.potencia = potencia;
+	// Metodo toString
+	@Override
+	public String toString() {
+		return "[potencia=" + potencia + ", " + super.toString() + "]";
 	}
+	
+	
 
 }

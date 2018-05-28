@@ -2,22 +2,22 @@ package aula11;
 
 public class CarroEletrico extends Automovel implements MotorEletrico {
 	
+	// Atributos
 	private double autonomia;
 	
-	public CarroEletrico(String matricula, int ano, String cor, int potencia, double autonomia) {
+	// Construtor
+	public CarroEletrico(String matricula, int ano, String cor, double potencia, double autonomia) {
 		super(matricula, ano, cor, potencia);
 		this.autonomia = autonomia;
 	}
 	
-	
-
+	// Metodo toString
 	@Override
 	public String toString() {
-		return "CarroEletrico [autonomia=" + autonomia + super.toString() + "]";
+		return "CarroEletrico [" + super.toString() + ", autonomia=" + autonomia + "]";
 	}
 
-
-
+	// Metodo getAutonomia();
 	@Override
 	public double getAutonomia() {
 		return this.autonomia;

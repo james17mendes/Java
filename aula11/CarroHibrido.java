@@ -2,32 +2,35 @@ package aula11;
 
 public class CarroHibrido extends Automovel implements MotorCombustao, MotorEletrico {
 	
+	// Atributos
 	private double autonomia;
-	private double emissaoC02;
-
-	public CarroHibrido(String matricula, int ano, String cor, int potencia, double autonomia, double emissaoC02) {
+	private double emissao;
+	
+	// Construtor
+	public CarroHibrido(String matricula, int ano, String cor, double potencia, double autonomia, double emissao) {
 		super(matricula, ano, cor, potencia);
 		this.autonomia = autonomia;
-		this.emissaoC02 = emissaoC02;
+		this.emissao = emissao;
 	}
-
 	
-	
+	// Metodo toString();
 	@Override
 	public String toString() {
-		return "CarroHibrido [autonomia=" + autonomia + ", emissaoC02=" + emissaoC02 + super.toString() + "]";
+		return "CarroHibrido [" + super.toString() + ", autonomia=" + autonomia + ", emissao=" + emissao + "]";
 	}
 
-
-
-	@Override
-	public double getAutonomia() {
-		return this.autonomia;
-	}
-
+	// Metodo getEmissaoCO2;
 	@Override
 	public double getEmissaoCO2() {
-		return this.emissaoC02;
+		// TODO Auto-generated method stub
+		return 0;
+	}
+	
+	// Metodo getAutonomia();
+	@Override
+	public double getAutonomia() {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 
 }

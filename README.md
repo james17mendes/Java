@@ -1,2 +1,2 @@
-# Java
-Java files for Object Oriented Programming
+# Programação Orientada a Objetos
+POO | Universidade de Aveiro 2018/2019
